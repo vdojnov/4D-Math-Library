@@ -463,7 +463,7 @@ $result:=$math.toDegrees($pi)
 var $result, $pi : Real
 $pi:=$math.PI
 $result:=$math.toRadians(180)
-    // Return 2.14159... <--- (π)
+    // Return 3.14159... <--- (π)
 ```
 
 ## ```toString(Real x)``` <a name="toString"></a>
