@@ -1,18 +1,18 @@
 ﻿{
 	"Sources/Classes/Math.4dm": {
-		"startSelection": 0,
-		"endSelection": 0,
-		"firstSelectedLine": 394,
-		"lastSelectedLine": 394,
+		"startSelection": 5,
+		"endSelection": 5,
+		"firstSelectedLine": 68,
+		"lastSelectedLine": 68,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2020-08-18T00:34:27.823Z"
 	},
 	"Sources/Methods/testMathClass.4dm": {
-		"startSelection": 9,
-		"endSelection": 13,
-		"firstSelectedLine": 60,
-		"lastSelectedLine": 60,
+		"startSelection": 6,
+		"endSelection": 6,
+		"firstSelectedLine": 4,
+		"lastSelectedLine": 4,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2020-08-18T00:28:27.053Z"
@@ -36,13 +36,13 @@
 		"stamp": "2020-08-18T02:32:01.080Z"
 	},
 	"Sources/Methods/TestMathLog.4dm": {
-		"startSelection": 80,
-		"endSelection": 80,
-		"firstSelectedLine": 20,
-		"lastSelectedLine": 20,
+		"startSelection": 20,
+		"endSelection": 20,
+		"firstSelectedLine": 9,
+		"lastSelectedLine": 9,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-08-18T19:33:38.076Z"
+		"stamp": "2020-08-19T20:16:39.484Z"
 	},
 	"Sources/Forms/Console/method.4dm": {
 		"startSelection": 58,
@@ -126,9 +126,9 @@
 		"stamp": "2020-08-14T06:51:51.434Z"
 	},
 	"Sources/Methods/import Math.4dm": {
-		"startSelection": 11,
-		"endSelection": 11,
-		"firstSelectedLine": 1,
+		"startSelection": 0,
+		"endSelection": 19,
+		"firstSelectedLine": 0,
 		"lastSelectedLine": 1,
 		"folding": [],
 		"bookmarks": [],

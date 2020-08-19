@@ -7,8 +7,8 @@ var $text : Text
 var $objectResult : Object
 
 //Example 1
-$result:=Math.max()
-
+$result:=Math.random()
+ALERT:C41(String:C10($result))
 
 //Example 2
 //$int:=5
@@ -17,10 +17,9 @@ $result:=Math.max()
 
 
 ////Example 3
-$int:=5
-$objectResult:=Math.factorialObject($int).value
+//$int:=5
+//$objectResult:=Math.factorialObject($int)
 //ASSERT(($objectResult.value=120) & ($objectResult.statusMessage=Math.success))
-
 
 
 
