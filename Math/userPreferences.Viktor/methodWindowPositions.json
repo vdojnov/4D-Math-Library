@@ -6,9 +6,9 @@
 		"height": 977
 	},
 	"Sources/Methods/testMathClass.4dm": {
-		"left": 387,
+		"left": 137,
 		"top": 109,
-		"width": 685,
+		"width": 935,
 		"height": 931
 	},
 	"Sources/Forms/Form1/ObjectMethods/Web Area.4dm": {
@@ -112,5 +112,11 @@
 		"top": 112,
 		"width": 946,
 		"height": 931
+	},
+	"Sources/Methods/Method9.4dm": {
+		"left": 7,
+		"top": 109,
+		"width": 730,
+		"height": 745
 	}
 }

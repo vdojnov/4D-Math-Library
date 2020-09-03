@@ -1,21 +1,21 @@
 ﻿{
 	"Sources/Classes/Math.4dm": {
-		"startSelection": 5,
-		"endSelection": 5,
-		"firstSelectedLine": 68,
-		"lastSelectedLine": 68,
+		"startSelection": 13,
+		"endSelection": 13,
+		"firstSelectedLine": 723,
+		"lastSelectedLine": 723,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-08-18T00:34:27.823Z"
+		"stamp": "2020-09-03T00:00:40.842Z"
 	},
 	"Sources/Methods/testMathClass.4dm": {
-		"startSelection": 6,
-		"endSelection": 6,
-		"firstSelectedLine": 4,
-		"lastSelectedLine": 4,
+		"startSelection": 19,
+		"endSelection": 19,
+		"firstSelectedLine": 229,
+		"lastSelectedLine": 229,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-08-18T00:28:27.053Z"
+		"stamp": "2020-09-03T00:02:38.572Z"
 	},
 	"Sources/Forms/Form1/ObjectMethods/Web Area.4dm": {
 		"startSelection": 0,
@@ -36,10 +36,10 @@
 		"stamp": "2020-08-18T02:32:01.080Z"
 	},
 	"Sources/Methods/TestMathLog.4dm": {
-		"startSelection": 20,
-		"endSelection": 20,
-		"firstSelectedLine": 9,
-		"lastSelectedLine": 9,
+		"startSelection": 11,
+		"endSelection": 11,
+		"firstSelectedLine": 11,
+		"lastSelectedLine": 11,
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2020-08-19T20:16:39.484Z"
@@ -169,5 +169,14 @@
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2020-08-18T02:31:45.497Z"
+	},
+	"Sources/Methods/Method9.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 5,
+		"lastSelectedLine": 5,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2020-09-01T05:26:00.676Z"
 	}
 }

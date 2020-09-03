@@ -5,16 +5,7 @@
 			"id": 2147483642,
 			"codeDescriptor": {
 				"type": 1,
-				"methodName": "TestMathLog"
-			}
-		},
-		{
-			"type": "method",
-			"id": 2147483639,
-			"codeDescriptor": {
-				"type": 11,
-				"className": "Math",
-				"methodPath": "/SOURCES/Classes/Math.4dm"
+				"methodName": "testMathClass"
 			}
 		},
 		{
@@ -22,11 +13,17 @@
 			"id": 2147483643,
 			"codeDescriptor": {
 				"type": 1,
-				"methodName": "testMathClass"
+				"methodName": "Method9"
 			}
 		},
 		{
-			"type": "explorer"
+			"type": "method",
+			"id": 2147483638,
+			"codeDescriptor": {
+				"type": 11,
+				"className": "Math",
+				"methodPath": "/SOURCES/Classes/Math.4dm"
+			}
 		},
 		{
 			"type": "structure"
