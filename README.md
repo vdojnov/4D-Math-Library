@@ -43,6 +43,32 @@ $math:=cs.Math.new()
 ```
 We can now use the $math Variable to perform math functions and access math constants.
 
+When Math Functions are called, they will return an **Object**. The object has two properties *result* and *statusMessage*.
+
+Object.*result* - Returns the result/numeric output
+
+Object.*statusMessage* - Returns the statusMessage of the function:
+
+1. success - "Success" 
+2. invalidInput - "Error: Invalid Input"
+3. divideByZero - "Error: Cannot divide by zero"
+4. missingParameters - "Error: Missing parameters"
+5. unexpectedParameter - "Error: Unexpected parameter(s)"
+
+
+```4D
+var $math : cs.Math
+var $objectResult : Object
+
+$math:= cs.Math.new()
+
+$objectResult:= $math.sum(5;2)
+
+ASSERT($objectResult.result = 5)
+ASSERT($objectResult.statusMessage = "Success")
+```
+
+
 ## Constants <a name="constants"></a>
 
 ### PI - *π* <a name="pi"></a>
@@ -71,9 +97,9 @@ $e:=$math.E
 **Parameters:** Takes one parameter of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.abs(-4)
-    //Returns 4
+    //$result.result Returns 4
 ```
 
 ### ```average(Real x, Real y, Real z,..., Real n)``` <a name="average"></a>
@@ -83,9 +109,9 @@ $result:=$math.abs(-4)
 **Parameters:** Take at least two or more parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.average(1;2;3;4;5)
-    //Returns 3
+    //$result.result Returns 3
 ```
 
 ## ```cbrt(Real x)``` <a name="cbrt"></a>
@@ -95,9 +121,9 @@ $result:=$math.average(1;2;3;4;5)
 **Parameters:** Takes one parameter of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.cbrt(16)
-    //Returns 4
+    //$result.result Returns 4
 ```
 
 
@@ -109,9 +135,9 @@ $result:=$math.cbrt(16)
 
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.ceil(4.02)
-    //Returns 5
+    //$result.result Returns 5
 ```
 
 
@@ -122,9 +148,9 @@ $result:=$math.ceil(4.02)
 **Parameters:** Takes two parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.copySign(4;-3)
-    //Returns -4
+    //$result.result Returns -4
 ```
 
 
@@ -135,10 +161,11 @@ $result:=$math.copySign(4;-3)
 **Parameters:** Takes one parameters of type Real 
 
 ```4D
-var $result, $pi : Real
+var $pi : Real
+var $result : Object
 $pi:=$math.PI
 $result:=$math.cos($pi)
-    //Returns -1
+    //$result.result Returns -1
 ```
 
 Cos can also take an additional parameter:
@@ -150,9 +177,9 @@ Cos can also take an additional parameter:
     **Parameters:** Takes one parameters of type Real, and one Boolean
 
     ```4D
-    var $result : Real
+    var $result : Object
     $result:=$math.cos(180; False)
-        //Returns -1
+        //$result.result Returns -1
     ``` 
 
 
@@ -163,9 +190,9 @@ Cos can also take an additional parameter:
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.exp(3)
-    //Returns e^3
+    //$result.result Returns e^3
 ```
 
 
@@ -176,9 +203,9 @@ $result:=$math.exp(3)
 **Parameters:** Takes one NON-NEGATIVE parameters of type Integer
 
 ```4D
-var $result : Integer
+var $result : Object
 $result:=$math.factorial(5)
-    //Returns 120
+    //$result.result Returns 120
 ```
 
 
@@ -189,12 +216,12 @@ $result:=$math.factorial(5)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.floor(4.05)
-    //Returns 4
+    //$result.result Returns 4
 
 $result:=$math.floor(-4.05)
-    //Returns -5
+    //$result.result Returns -5
 ```
 
 
@@ -205,9 +232,9 @@ $result:=$math.floor(-4.05)
 **Parameters:** Takes two parameters of type Real, x and y representing non-hypotenuse sides of the triangle
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.hypot(3;4)
-    //Returns 5
+    //$result.result Returns 5
 ```
 
 ## ```int(Real x)``` <a name="int"></a>
@@ -216,9 +243,9 @@ $result:=$math.hypot(3;4)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.int(45.8)
-    // Returns 45
+    //$result.result Returns 45
 ```
 
 ## ```log(Real x)``` <a name="log"></a>
@@ -228,10 +255,11 @@ $result:=$math.int(45.8)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result, $e : Real
+var $e : Real
+var $result: Object
 $e:=$math.E
 $result:=$math.log($e)
-    // Returns 1
+    //$result.result Returns 1
 ```
 
 
@@ -242,9 +270,9 @@ $result:=$math.log($e)
 **Parameters:** Take at least two or more parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.max(4;5;2;7;3)
-    // Returns 7
+    //$result.result Returns 7
 ```
 
 
@@ -255,9 +283,9 @@ $result:=$math.max(4;5;2;7;3)
 **Parameters:** Take at least two or more parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.min(4;5;2;7;3)
-    // Returns 2
+    //$result.result Returns 2
 ```
 
 
@@ -268,9 +296,9 @@ $result:=$math.min(4;5;2;7;3)
 **Parameters:** Takes two parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.pow(3;2)
-    // Returns 9
+    //$result.result Returns 9
 ```
 
 ## ```print(Real x, Real y)``` <a name="print"></a>
@@ -295,9 +323,9 @@ $math.print(5)
     **Parameters:** Takes no parameters
 
     ```4D
-    var $result : Real
+    var $result : Object
     $result:=$math.random()
-        // Return 0.3210269206472 for example
+        //$result.result Return 0.3210269206472 for example
     ```
 2.  ### ```random(Real x)```
     **Description:** Returns a number between 0 (inclusive) and x (inclusive)
@@ -305,9 +333,9 @@ $math.print(5)
     **Parameters:** Takes one parameter of type Real
 
     ```4D
-    var $result : Real
+    var $result : Object
     $result:=$math.random(5)
-        // Return 3 for example
+        //$result.result Return 3 for example
     ```
 3.  ### ```random(Real x, Real y)```
     **Description:** Returns a number between x (inclusive) and y (inclusive)
@@ -315,9 +343,9 @@ $math.print(5)
     **Parameters:** Takes two parameter of type Real
 
     ```4D
-    var $result : Real
+    var $result : Object
     $result:=$math.random(2;5)
-        // Return 3 for example
+        //$result.result Return 3 for example
     ```
 ## ```round()``` <a name="round"></a>
 #### Takes one or two parameters
@@ -328,9 +356,9 @@ $math.print(5)
     **Parameters:** Takes one parameter of type Real
 
     ```4D
-    var $result : Real
+    var $result : Object
     $result:=$math.round(2.575)
-        // Return 3
+        //$result.result Return 3
     ```
 
 2.  ### ```round(Real x, Int y)```
@@ -339,9 +367,9 @@ $math.print(5)
     **Parameters:** Takes two parameter, x of type Real, y of type Int
 
     ```4D
-    var $result : Real
+    var $result : Object
     $result:=$math.round(2.575;2)
-        // Return 2.58
+        //$result.result Return 2.58
     ```
 
 ## ```sign(Real x)``` <a name="sign"></a>
@@ -351,15 +379,15 @@ $math.print(5)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.sign(-4)
-    Returns -1
+    //$result.result Returns -1
 
 $result:=$math.sign(4)
-    Returns 1
+    //$result.result Returns 1
 
 $result:=$math.sign(0)
-    Returns 0
+    //$result.result Returns 0
 ```
 
 ## ```sin(Real x)``` <a name="sin"></a>
@@ -369,10 +397,11 @@ $result:=$math.sign(0)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result, $pi: Real
+var $pi: Real
+var $result: Object
 $pi:=$math.PI
 $result:=$math.sin($pi)
-    // Returns 0
+    //$result.result Returns 0
 ```
 
 1. ### ```sin(Real x, Boolean isRadian)```
@@ -382,9 +411,9 @@ $result:=$math.sin($pi)
     **Parameters:** Takes one parameters of type Real, and one Boolean
 
     ```4D
-    var $result : Real
+    var $result : Object
     $result:=$math.sin(180; False)
-        //Returns 0
+        //$result.result Returns 0
     ``` 
 
 
@@ -395,9 +424,9 @@ $result:=$math.sin($pi)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.sqrt(9)
-    // Returns 3    
+    //$result.result Returns 3    
 ```
 
 
@@ -408,9 +437,9 @@ $result:=$math.sqrt(9)
 **Parameters:** Take at least two or more parameters of type Real
 
 ```4D
-var $result : Real
+var $result : Object
 $result:=$math.sum(1;2;3;4;5)
-    // Returns 15
+    //$result.result Returns 15
 ```
 
 
@@ -421,10 +450,11 @@ $result:=$math.sum(1;2;3;4;5)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result, $pi : Real
+var $pi: Real
+var $result: Object
 $pi:=$math.PI
 $result:=$math.tan($pi)
-    // Returns -1
+    //$result.result Returns -1
 ```
 1. ### ```tan(Real x, Boolean isRadian)```
 
@@ -433,9 +463,9 @@ $result:=$math.tan($pi)
     **Parameters:** Takes one parameters of type Real, and one Boolean
 
     ```4D
-    var $result : Real
+    var $result : Object
     $result:=$math.tan(180; False)
-        //Returns -1
+        //$result.result Returns -1
     ``` 
 
 
@@ -446,10 +476,11 @@ $result:=$math.tan($pi)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result, $pi : Real
+var $pi: Real
+var $result: Object
 $pi:=$math.PI
 $result:=$math.toDegrees($pi)
-    // Returns 180
+    //$result.result Returns 180
 ```
 
 
@@ -460,10 +491,11 @@ $result:=$math.toDegrees($pi)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result, $pi : Real
+var $pi: Real
+var $result: Object
 $pi:=$math.PI
 $result:=$math.toRadians(180)
-    // Return 3.14159... <--- (π)
+    //$result.result Return 3.14159... <--- (π)
 ```
 
 ## ```toString(Real x)``` <a name="toString"></a>
@@ -473,7 +505,7 @@ $result:=$math.toRadians(180)
 **Parameters:** Takes one parameters of type Real
 
 ```4D
-var $result: Real
+var $result: Object
 $result:=$math.toString(180)
-    // Return "180"
+    //$result.result Return "180"
 ```
